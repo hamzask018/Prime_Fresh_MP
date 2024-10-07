@@ -4,7 +4,14 @@ import cors from "cors";
 import dotenv from "dotenv";
 import connectDB from "./utils/db.js";
 import userRoute from "./routes/user.route.js"
- 
+import productRoutes from "./routes/product.route.js" 
+import categoryRoutes from "./routes/category.route.js"
+import orderRoutes from "./routes/order.route.js"
+import paymentRoutes from "./routes/payment.route.js"
+import couponRoutes from "./routes/coupon.route.js"
+
+
+
 dotenv.config({});
 
 const app = express();
@@ -23,6 +30,12 @@ app.use(cors(corsOptions));
 
 //API's
 app.use("/api/v1/user",userRoute);
+app.use('/api/v1/products', productRoutes);
+app.use('/api/v1/categories', categoryRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/payments', paymentRoutes);
+app.use('/api/coupons', couponRoutes);
+
 
 
 app.listen(PORT, () => {
