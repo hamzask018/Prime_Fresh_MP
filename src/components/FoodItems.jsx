@@ -15,7 +15,7 @@ const FoodItems = () => {
   return (
     <>
     <Toaster position='top-center' reverseOrder={false}/>
-    <div className='flex flex-wrap gap-10 justify-center lg:justify-start mx-6 my-10'>
+    <div className='flex flex-wrap gap-10 justify-center lg:justify-center mx-6 my-10'>
         {
             FoodData.filter((food)=> {
               if(category==="ALL"){
@@ -34,6 +34,7 @@ const FoodItems = () => {
               desc={food.desc}
               rating={food.rating}
               img={food.img}
+              discount={50}
               handleToast={handleToast}
             />
             })
