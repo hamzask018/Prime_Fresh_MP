@@ -25,7 +25,7 @@ const ItemCard = ({id,name,price,img,qty}) => {
         ></MdOutlineDelete>
         <img src={img} alt="img" 
         
-        className='w-[50px] h-[50px] '
+        className='w-[30px] h-[10px] '
         />      
         <div className='leading-5'>
             <h2 className='font-bold text-gray-800'>{name}</h2>
