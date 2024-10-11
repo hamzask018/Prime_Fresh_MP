@@ -9,6 +9,7 @@ import categoryRoutes from "./routes/category.route.js"
 import orderRoutes from "./routes/order.route.js"
 import paymentRoutes from "./routes/payment.route.js"
 import couponRoutes from "./routes/coupon.route.js"
+import CartRoutes from "./routes/cart.route.js"
 
 
 
@@ -35,6 +36,7 @@ app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/coupons', couponRoutes);
+app.use('/api/cart', CartRoutes);
 
 
 
