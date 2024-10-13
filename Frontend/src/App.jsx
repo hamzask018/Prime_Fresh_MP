@@ -7,6 +7,7 @@ import Error from './pages/Error'
 import ProtectedRoute from './components/ProtectedRoute'
 import Signup from "./pages/Signup"
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
       <Route path='/*' element={<Error/>}></Route>
       <Route path='/signup' element={<Signup/>}></Route>
       <Route path='/login' element={<Login/>}></Route>
+      <Route path='/profile' element={<Profile/>}></Route>
     </Routes>
     </BrowserRouter>
   )

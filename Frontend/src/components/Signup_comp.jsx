@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react';
 
+
 const Signup_comp = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -42,7 +43,7 @@ const Signup_comp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className="  flex items-center justify-center top-2">
       <div className="w-full max-w-4xl flex bg-green-500 shadow-lg rounded-lg overflow-hidden">
         <div className="hidden lg:flex w-1/3 bg-white items-center justify-center p-6">
           <p className="text-green-500 text-lg font-bold italic">
