@@ -26,14 +26,14 @@ const Footer = () => {
             <div className='footer-content-right'>
                   <h2>GET IN Touch</h2>
                   <ul>
-                    <li>+1-232-2312-3243</li>
-                    <li>contact@primeFresh.in</li>
+                    <li>+91 7559111595</li>
+                    <li>alex1mike786@gmail.com</li>
                   </ul>
             </div>
          </div>
          <hr />
          <p className="footer-copyright">
-            Copyright 2024 &copy; Prime Fresh - All Right Reserved
+            Copyright 2024 &copy; Vanguards - All Right Reserved
          </p>
     </div>
   )

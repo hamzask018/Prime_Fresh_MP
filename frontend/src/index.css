@@ -9,6 +9,7 @@
 
 body{
   min-height: 100vh;
+  background-color:#eeeae3;
 }
 a{
   text-decoration: none;
@@ -23,6 +24,7 @@ a{
   display: flex;
   align-items:center;
   gap: 40px;
+  
 }
 
 .navbar button{
