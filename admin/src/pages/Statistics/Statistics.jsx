@@ -3,6 +3,7 @@ import TimeSeriesChart from './TimeSeriesChart';
 import DonutChart from './DonutChart';
 import BarChart from './BarChart';
 import './Statistics.css'
+import { Link } from 'react-router-dom';
 
 
 
@@ -152,12 +153,12 @@ const Statistics = () => {
     
     return (
         <div className="card-container">
-            <div className='row'>
+            <div className='row'><Link to={'/statistics/categorywise'}>
                 <div className='linechart'>
                     <div style={{ width: '100%', margin: 'auto', height: '100%' }}>
                         <TimeSeriesChart datasets={Time_datasets} title={'Category-wise sales comparsions'} />
                     </div>
-                </div>
+                </div></Link>
                 <div className='piechart'>
                     <div style={{ width: '100%', height: '100%',justifyContent: 'flex-end', margin:'auto', paddingLeft:'20%' }}>
                         <DonutChart data={Pie_data}/>
