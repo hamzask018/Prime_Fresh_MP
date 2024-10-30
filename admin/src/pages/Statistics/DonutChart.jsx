@@ -17,8 +17,8 @@ const DonutChart = ({ data }) => {
     datasets: [
       {
         data: data.map(item => item.value),
-        backgroundColor: data.map((_, index) => `hsl(${(index * 60) % 360}, 70%, 50%)`), // Dynamic color
-        hoverBackgroundColor: data.map((_, index) => `hsl(${(index * 60) % 360}, 100%, 60%)`),
+        backgroundColor: data.map(item => item.backgroundColor), // Dynamic color
+        hoverBackgroundColor: data.map(item => item.hoverBackgroundColor),
       },
     ],
   };
