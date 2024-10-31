@@ -149,4 +149,175 @@ export const Pie_data = [
     { label: 'Cake', value: 65, backgroundColor: 'hsl(197, 53%, 79%)', hoverBackgroundColor: 'hsl(197, 53%, 90%)' }
 ];
 
+export const Bar_data = [
+  { label: 'Category A', value: 65 },
+  { label: 'Category B', value: 59 },
+  { label: 'Category C', value: 80 },
+  { label: 'Category D', value: 81 },
+  { label: 'Category E', value: 56 },
+  { label: 'Category F', value: 55 },
+  { label: 'Category G', value: 40 },
+  { label: 'Category H', value: 90 },
+  { label: 'Category I', value: 75 },
+  { label: 'Category J', value: 62 },
+  { label: 'Category K', value: 85 },
+  { label: 'Category L', value: 30 },
+  { label: 'Category M', value: 70 },
+  { label: 'Category N', value: 95 },
+  { label: 'Category O', value: 20 },
+  { label: 'Category P', value: 40 },
+  { label: 'Category Q', value: 72 },
+  { label: 'Category R', value: 68 },
+  { label: 'Category S', value: 92 },
+  { label: 'Category T', value: 55 },
+  { label: 'Category U', value: 30 },
+  { label: 'Category V', value: 45 },
+  { label: 'Category W', value: 80 },
+  { label: 'Category X', value: 33 },
+  { label: 'Category Y', value: 78 },
+  { label: 'Category Z', value: 61 },
+  { label: 'Category AA', value: 95 },
+  { label: 'Category AB', value: 50 },
+  { label: 'Category AC', value: 88 },
+  { label: 'Category AD', value: 99 },
+  { label: 'Category AE', value: 29 },
+  { label: 'Category AF', value: 66 },
+  { label: 'Category AG', value: 45 },
+  { label: 'Category AH', value: 56 },
+  { label: 'Category AI', value: 80 },
+  { label: 'Category AJ', value: 90 },
+  { label: 'Category AK', value: 25 },
+  { label: 'Category AL', value: 70 },
+  { label: 'Category AM', value: 87 },
+  { label: 'Category AN', value: 40 },
+  { label: 'Category AO', value: 55 },
+  { label: 'Category AP', value: 60 },
+];
+
 export const Time_datasets = [pasta, rolls, deserts, sandwich, noodles, pureveg, salad, cake];
+
+// Options
+
+export const Time_options_CategoryWise = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display:true,
+      position: 'bottom'
+    },
+    title: {
+      display: true,
+      text: ""
+    }
+  },
+  scales: {
+    x: {
+      type: 'time',
+      time: {
+        unit: 'day', // Can be 'day', 'month', 'year', etc. depending on data granularity
+      },
+      title: {
+        display: true,
+        text: 'Date'
+      }
+    },
+    y: {
+      title: {
+        display: true,
+        text: 'Price ($)'
+      }
+    }
+  }
+};
+
+export const Time_options_Statistics = {
+  responsive: true,
+  maintainAspectRatio: false,
+  plugins: {
+    legend: {
+      display:false,
+      position: 'bottom'
+    },
+    title: {
+      display: true,
+      text: ""
+    }
+  },
+  scales: {
+    x: {
+      type: 'time',
+      time: {
+        unit: 'day', // Can be 'day', 'month', 'year', etc. depending on data granularity
+      },
+      title: {
+        display: true,
+        text: 'Date'
+      }
+    },
+    y: {
+      title: {
+        display: true,
+        text: 'Price ($)'
+      }
+    }
+  }
+};
+
+export const Bar_options = {
+  maintainAspectRatio: false,
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    tooltip: {
+      callbacks: {
+        label: function (context) {
+          let label = context.dataset.label || '';
+          if (label) {
+            label += ': ';
+          }
+          label += context.raw;
+          return label;
+        },
+      },
+    },
+  },
+  scales: {
+    x: {
+      title: {
+        display: false,
+        text: 'Categories',
+      },
+    },
+    y: {
+      title: {
+        display: true,
+        text: 'Values',
+      },
+      beginAtZero: true, // Start the y-axis at 0
+    },
+  },
+};
+
+export const Pie_options = {
+  responsive: true,
+  plugins: {
+    legend: {
+      position: 'top',
+    },
+    tooltip: {
+      callbacks: {
+        label: function (context) {
+          let label = context.label || '';
+          if (label) {
+            label += ': ';
+          }
+          label += context.raw;
+          return label;
+        },
+      },
+    },
+  },
+};

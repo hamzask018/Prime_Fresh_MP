@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TimeSeriesChart from '../TimeSeriesChart'
-import { Time_datasets } from '../Data'
+import { Time_datasets, Time_options_CategoryWise } from '../Data'
 import './CategoryWise.css'
 
 const CategoryWise = () => {
@@ -32,7 +32,7 @@ const CategoryWise = () => {
     <div>
       <div className='linechart2'>
         <div style={{ width: '100%', margin: 'auto', height: '100%' }}>
-          <TimeSeriesChart datasets={filteredData} title={'Category-wise sales comparisons'} />
+          <TimeSeriesChart datasets={filteredData} title={'Category-wise sales comparisons'} options={Time_options_CategoryWise} />
         </div>
       </div>
       <div >

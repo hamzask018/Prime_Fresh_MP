@@ -10,39 +10,39 @@ import {
 // Register necessary components with Chart.js
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = ({ data }) => {
+const DonutChart = ({ datasets , options }) => {
   // Prepare the data for the chart
   const chartData = {
-    labels: data.map(item => item.label),
+    labels: datasets.map(item => item.label),
     datasets: [
       {
-        data: data.map(item => item.value),
-        backgroundColor: data.map(item => item.backgroundColor), // Dynamic color
-        hoverBackgroundColor: data.map(item => item.hoverBackgroundColor),
+        data: datasets.map(item => item.value),
+        backgroundColor: datasets.map(item => item.backgroundColor), // Dynamic color
+        hoverBackgroundColor: datasets.map(item => item.hoverBackgroundColor),
       },
     ],
   };
 
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-      tooltip: {
-        callbacks: {
-          label: function (context) {
-            let label = context.label || '';
-            if (label) {
-              label += ': ';
-            }
-            label += context.raw;
-            return label;
-          },
-        },
-      },
-    },
-  };
+  // const options = {
+  //   responsive: true,
+  //   plugins: {
+  //     legend: {
+  //       position: 'top',
+  //     },
+  //     tooltip: {
+  //       callbacks: {
+  //         label: function (context) {
+  //           let label = context.label || '';
+  //           if (label) {
+  //             label += ': ';
+  //           }
+  //           label += context.raw;
+  //           return label;
+  //         },
+  //       },
+  //     },
+  //   },
+  // };
 
   return <Doughnut data={chartData} options={options} />;
 };
