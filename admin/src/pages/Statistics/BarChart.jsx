@@ -26,44 +26,7 @@ const BarChart = ({ datasets , options }) => {
       },
     ],
   };
-
-  // const options = {
-  //   maintainAspectRatio: false,
-  //   responsive: true,
-  //   plugins: {
-  //     legend: {
-  //       position: 'top',
-  //     },
-  //     tooltip: {
-  //       callbacks: {
-  //         label: function (context) {
-  //           let label = context.dataset.label || '';
-  //           if (label) {
-  //             label += ': ';
-  //           }
-  //           label += context.raw;
-  //           return label;
-  //         },
-  //       },
-  //     },
-  //   },
-  //   scales: {
-  //     x: {
-  //       title: {
-  //         display: false,
-  //         text: 'Categories',
-  //       },
-  //     },
-  //     y: {
-  //       title: {
-  //         display: true,
-  //         text: 'Values',
-  //       },
-  //       beginAtZero: true, // Start the y-axis at 0
-  //     },
-  //   },
-  // };
-
+  
   return <Bar data={chartData} options={options} />;
 };
 

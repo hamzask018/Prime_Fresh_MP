@@ -30,38 +30,6 @@ const TimeSeriesChart = ({datasets, title , options}) => {
     datasets: datasets
   };
 
-  // const options = {
-  //   responsive: true,
-  //   maintainAspectRatio: false,
-  //   plugins: {
-  //     legend: {
-  //       position: 'top'
-  //     },
-  //     title: {
-  //       display: true,
-  //       text: title
-  //     }
-  //   },
-  //   scales: {
-  //     x: {
-  //       type: 'time',
-  //       time: {
-  //         unit: 'day', // Can be 'day', 'month', 'year', etc. depending on data granularity
-  //       },
-  //       title: {
-  //         display: true,
-  //         text: 'Date'
-  //       }
-  //     },
-  //     y: {
-  //       title: {
-  //         display: true,
-  //         text: 'Price ($)'
-  //       }
-  //     }
-  //   }
-  // };
-
   return <Line data={data} options={options} />;
 };
 

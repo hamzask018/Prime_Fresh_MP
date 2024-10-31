@@ -23,27 +23,6 @@ const DonutChart = ({ datasets , options }) => {
     ],
   };
 
-  // const options = {
-  //   responsive: true,
-  //   plugins: {
-  //     legend: {
-  //       position: 'top',
-  //     },
-  //     tooltip: {
-  //       callbacks: {
-  //         label: function (context) {
-  //           let label = context.label || '';
-  //           if (label) {
-  //             label += ': ';
-  //           }
-  //           label += context.raw;
-  //           return label;
-  //         },
-  //       },
-  //     },
-  //   },
-  // };
-
   return <Doughnut data={chartData} options={options} />;
 };
 
